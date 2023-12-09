@@ -1,8 +1,8 @@
 package util
 
 import (
-	set "github.com/senseisub/collegepluscollegefinderbackend-backend-api/util/Set"
-	"github.com/senseisub/collegepluscollegefinderbackend-backend-api/util/Set/hashset"
+	set "github.com/CollegePlusCo/GoUtil/Set"
+	"github.com/CollegePlusCo/GoUtil/Set/hashset"
 )
 
 func ArrToSet(arr *[]string) *set.Set[string] {

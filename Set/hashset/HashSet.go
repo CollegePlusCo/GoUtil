@@ -1,7 +1,7 @@
 package hashset
 
 import (
-	set "github.com/senseisub/collegepluscollegefinderbackend-backend-api/util/Set"
+	set "github.com/CollegePlusCo/GoUtil/Set"
 )
 
 type HashSet[T comparable] struct {
