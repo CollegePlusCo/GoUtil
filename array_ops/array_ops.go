@@ -9,7 +9,7 @@ func Contains[T comparable](val T, arr *[]T) bool {
 	return false
 }
 
-func Combine[T comparable](arr1 *[]T, arr2 *[]T) *[]T {
+func Combine[T any](arr1 *[]T, arr2 *[]T) *[]T {
 	combArr := make([]T, len(*arr1)+len(*arr2))
 	len1 := len(*arr1)
 	for i := range combArr {
