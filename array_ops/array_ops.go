@@ -21,3 +21,11 @@ func Combine[T any](arr1 *[]T, arr2 *[]T) *[]T {
 	}
 	return &combArr
 }
+
+func InitializeArrays(arrs *[]*[]any) {
+	for _, arr := range *arrs {
+		if arr == nil {
+			arr = &[]any{}
+		}
+	}
+}

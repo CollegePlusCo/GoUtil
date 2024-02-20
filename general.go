@@ -33,3 +33,16 @@ func MapToStruct[T any](source any) (*T, error) {
 	}
 	return &elem, nil
 }
+
+func StructToMap[T any](source T) (map[string]any, error) {
+	var elem map[string]any
+	marshStr, marshErr := json.Marshal(source)
+	if marshErr != nil {
+		return nil, marshErr
+	}
+	unMarshErr := json.Unmarshal(marshStr, &elem)
+	if unMarshErr != nil {
+		return nil, unMarshErr
+	}
+	return elem, nil
+}
